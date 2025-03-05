@@ -10,16 +10,16 @@
 
 body {
     width: 100%;
-    height: auto; /* Allow natural height */
+    height: auto; 
     overflow-x: hidden;
-    overflow-y: auto; /* Enable scrolling */
+    overflow-y: auto; 
     position: relative;
     display: block;
 }
 
 section {
     width: 100%;
-    min-height: 100vh; /* Allow sections to extend beyond viewport */
+    min-height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
