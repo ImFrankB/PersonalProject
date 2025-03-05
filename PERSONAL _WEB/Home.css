@@ -16,6 +16,7 @@ body {
     linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 320px 1.4px;
+    position: relative;
 }
 
 
@@ -81,8 +82,8 @@ body {
 .intro {
     width: 20em;
     position: absolute;
-    top: 60%;
-    left: 60%;
+    top: 50%;
+    left: 65%;
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 1.2rem;
@@ -98,17 +99,18 @@ body {
     color: #4bffa5;
 }
 
-.contact {
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    font-size: 0.8rem;
+.contact{
+    position: fixed;
+    bottom: 3%;
+    left: 3%;
+
 }
 
+
 .social-accounts {
-    position: absolute;
+    position: fixed;
     right: 2%;
-    top: 25%;
+    top: 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -134,4 +136,72 @@ body {
 .social-icons img:hover {
     opacity: 1;
     scale: 1.1;
+}
+
+
+.slide1, .slide2{
+    position: absolute;
+    display: block;
+    top: 2em;
+    width: 60%;
+    font-size: 3.5em;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    animation-duration: 8.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+p span{
+    color: #4bffa5;
+}
+
+.slideText{
+    width: 100vw;
+    display: inline;
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+}
+
+
+
+.slide1{
+    animation-name: slide1;
+}
+
+.slide2{
+    animation-name: slide2;
+}
+
+
+@keyframes slide1{
+    0%, 8.3%{
+        left: -100%;
+        opacity: 0;
+    }
+    8.3%, 25%{
+        left: 25%;
+        opacity: 1;
+    }
+    33.33%, 100%{
+        left: 110%;
+        opacity: 0;
+    }
+}
+
+@keyframes slide2{
+    0%, 33.33%{
+        left: -100%;
+        opacity: 0;
+    }
+    41.63%, 58.29%{
+        left: 25%;
+        opacity: 1;
+    }
+    66.66%, 100%{
+        left: 110%;
+        opacity: 0;
+    }
 }
