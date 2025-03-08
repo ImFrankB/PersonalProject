@@ -13,7 +13,7 @@ body {
     overflow-y: auto;
     background-color: #000;
     background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 2px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 320px 1.4px;
     position: relative;
