@@ -1,0 +1,62 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.Message-container {
+    position: absolute;
+    width: 750px;
+    height: 140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+}
+
+.Message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 100%;
+    height: 100%;
+}
+
+.Message p {
+    display: inline-block;
+    padding-left: 100%;
+    text-align: center;
+    white-space: nowrap;
+    min-width: 100%;
+    height: 100%;
+    line-height: 140px;
+    font-size: 100px;
+    font-family: "Roboto" sans-serif;
+    font-weight: 700;
+    animation: Message 15s linear infinite;
+}
+
+@keyframes Message {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+@media (max-width: 768px){
+    .Message p{
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .Message p{
+        font-size: 22px;
+    }
+}

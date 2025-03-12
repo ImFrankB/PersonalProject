@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "sans-serif";
 }
 
 body {
@@ -248,6 +248,11 @@ p span{
     .hamburger-menu.open{
         transition: .7s;
         transform: rotate(90deg);
+    }
+
+    .intro{
+        position: absolute;
+        left: 50%;
     }
 }
 
