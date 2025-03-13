@@ -3,15 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
         (entries, observer) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
-                    entry.target.style.transitionDelay = `${index * 0.15}s`; // Subtle stagger
+                    entry.target.style.transitionDelay = `${index * 0.15}s`; 
                     entry.target.classList.add("show");
-                    observer.unobserve(entry.target); // Ensures animation runs only once
+                    observer.unobserve(entry.target); 
                 }
             });
         },
         {
-            rootMargin: "0px 0px -10% 0px", // Triggers slightly before entering viewport
-            threshold: 0.1, // Starts when at least 10% of the element is visible
+            rootMargin: "0px 0px -10% 0px", 
+            threshold: 0.1, 
         }
     );
 

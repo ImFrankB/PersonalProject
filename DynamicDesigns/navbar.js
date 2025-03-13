@@ -8,7 +8,7 @@ fetch("navbar.html")
 
         navbar_links.forEach((link) => {
             if (link.getAttribute("href") === activeLink) {
-                link.classList.add("clicked"); // Apply stored highlight
+                link.classList.add("clicked"); 
             }
 
             link.addEventListener("click", function () {
