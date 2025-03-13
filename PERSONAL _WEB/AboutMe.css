@@ -18,13 +18,27 @@ body {
     display: block;
 }
 
+.about-me,
+.timeline-item,
+.Lang-icon {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+
 section {
     width: 100%;
     min-height: 100vh;
     display: grid;
     place-content: center;
     place-items: center;
-    padding: 2rem;
+    padding: 4rem;
 }
 
 
@@ -34,18 +48,8 @@ section {
     align-items: center;
     gap: 5rem;
     width: 100%;
-
-    opacity: 0;
-    transition: all 1.2s;
-    filter: blur(4px);
-    transform: translateX(-100%);
 }
 
-.show{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
 
 
 .profile-img {
@@ -153,11 +157,15 @@ section {
 
 
 .coding-skillset h1{
-    position: absolute;
-    left: 15%;
+    position: relative;
+    transform: translateX(-30vw);
     font-family: "Roboto", sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 600;
+    padding: 1.7rem;
+    background-color: rgb(17, 17, 17);
+    color: rgb(238, 238, 238);
+    border: 2px solid hsla(0, 0%, 48.6%, .1294117647);
 
 }
 
@@ -224,14 +232,106 @@ footer{
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 320px 700px; 
+    background-size: 320px 2000px; 
     background-position: 0px;
     
 }
 
+.Education h1{
+    position: relative;
+    transform: translateX(-30vw);
+    font-family: "Roboto", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 1.7rem;
+    background-color: rgb(17, 17, 17);
+    color: rgb(238, 238, 238);
+    border: 2px solid hsla(0, 0%, 48.6%, .1294117647);
 
 
+}
 
+#timeline-section{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(17, 17, 17);
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.1) 0.8px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0.8px, transparent 1px);
+    background-size: 320px 2000px; 
+    background-position: 0px; 
+	min-height: 100vh;
+	padding: 100px 15px;
+}
+.timeline-items{
+	max-width: 1000px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.timeline-items::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: #2f363e;
+	left: calc(50% - 1px);
+}
+.timeline-item{
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
+}
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+	text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+	height: 16px;
+	width: 16px;
+	background-color: #28a745;
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top:10px;
+}
+.timeline-date{
+	font-size: 18px;
+	color: #28a745;
+	margin:6px 0 15px;
+}
+.timeline-content{
+    text-align: center;
+	padding: 30px;
+    background-color: rgb(17, 17, 17);
+    color: rgb(238, 238, 238);
+    border: 2px solid hsla(0, 0%, 48.6%, .1294117647);
+}
+
+.timeline-content:hover{
+    border: 2px solid #28a745;
+    cursor: pointer;
+}
+.timeline-content h3{
+    font-size: 20px;
+	color: #ffffff;
+	margin:0 0 10px;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+.timeline-content p{
+    color: #c8c8c8;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+}
 
 
 @media (max-width: 768px) {
@@ -267,12 +367,38 @@ footer{
     .Lang-icon span {
         font-size: 1rem;
     }
+
+    .timeline-items::before{
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+	.timeline-dot{
+		left:0;
+	}
+
+    .Education h1{
+        font-size: 1.7rem;
+        padding: 1.2rem;
+        transform: translateX(0);
+    }
+
+    .coding-skillset h1{
+        font-size: 1.7rem;
+        padding: 1.2rem;
+        transform: translateX(0);
+
+    }
+
 }
 
 @media (max-width: 480px) {
-    .about-me {
-        text-align: center;
-    }
 
     .profile-img img {
         width: 150px;
@@ -300,6 +426,19 @@ footer{
 
     .Lang-icon span {
         font-size: 1rem;
+    }
+
+    .Education h1{
+        font-size: 1.7rem;
+        padding: 1.2rem;
+        transform: translateX(-7vw);
+    }
+
+    .coding-skillset h1{
+        font-size: 1.7rem;
+        padding: 1.2rem;
+        transform: translateX(0);
+
     }
 }
 
