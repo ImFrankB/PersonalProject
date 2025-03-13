@@ -35,7 +35,7 @@ fetch("navbar.html")
                     &#9776;
                 </div>
                 <div class="nav-links" id="nav-links">
-                    <a href="Home.html">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="Projects.html">Projects</a>
                     <a href="AboutMe.html">About Me</a>
 
