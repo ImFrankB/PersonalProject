@@ -396,14 +396,21 @@ footer{
 }
 
 @media (max-width: 480px) {
+    .about-me {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
 
     .profile-img img {
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
+        max-width: 100%;
     }
 
     .profile-content h1 {
         font-size: 1.8rem;
+        margin-bottom: 1rem;
     }
 
     .Prog-lang-Skills {
@@ -412,29 +419,22 @@ footer{
     }
 
     .Lang-icon {
-        width: 90%;
+        width: 100%;
         height: auto;
         padding: 1rem;
+        margin: 0.5rem 0;
     }
 
-    .Lang-icon i {
-        font-size: 3rem;
+    .timeline-items::before {
+        left: 5px;
     }
 
-    .Lang-icon span {
-        font-size: 1rem;
+    .timeline-item {
+        margin-bottom: 30px;
     }
 
-    .Education h1{
-        font-size: 1.7rem;
-        padding: 1.2rem;
-        transform: translateX(-7vw);
-    }
-
-    .coding-skillset h1{
-        font-size: 1.7rem;
-        padding: 1.2rem;
-        transform: translateX(0);
-
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        padding-left: 30px;
     }
 }
